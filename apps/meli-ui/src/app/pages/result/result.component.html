@@ -1,0 +1,32 @@
+<meli-header (onFind)="find($event)"></meli-header>
+
+<meli-breadcrumb [categories]="result?.categories"></meli-breadcrumb>
+
+<div *ngIf="result?.items.length > 0" class="content">
+
+    <ng-container *ngFor="let item of result?.items; let i = index">
+
+        <div class="result">
+
+            <div (click)="detail(item)" class="result__image">
+                <img [src]="item?.picture" alt="picture" />
+            </div>
+
+            <div class="result__description">
+                <div class="price">{{item?.price?.amount | currency:'CLP':'symbol'}}</div>
+                <p (click)="detail(item)" class="description">{{item?.title}} </p>
+            </div>
+
+            <div class="result__city">
+                {{item.cityName | titlecase }}
+            </div>
+        </div>
+
+        <hr *ngIf="result?.items.length !== (i + 1)" class="space" />
+
+    </ng-container>
+
+</div>
+<div *ngIf="result?.items.length === 0" class="content">
+    <h5>No hay publicaciones que coincidan con tu búsqueda.</h5>
+</div>

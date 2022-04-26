@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "projects": {
+    "meli-api": "apps/meli-api",
+    "meli-entity": "libs/meli-entity",
+    "meli-ui": "apps/meli-ui"
+  }
+}

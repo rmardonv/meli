@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #ebebeb !important;
+}
+
+.content {
+    background-color: white;
+    margin: 20px 250px;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.btn-primary {
+    background-color: #3483fa;
+    border-color: #3483fa;
+}
+
+
+.btn-secondary:focus {
+    color: unset;
+    background-color: unset;
+    border-color: unset;
+    box-shadow: unset;
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: unset;
+}
+
+.form-control.ng-invalid.ng-touched {
+    border: 1px solid red !important;
+}

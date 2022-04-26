@@ -1,0 +1,19 @@
+.module {
+    display: flex;
+    min-height: 300px;
+    align-items: center;
+    justify-content: center;
+
+    &__legend {
+        color: #727272;
+
+        img {
+            width: 180px;
+        }
+
+        h3 {
+            font-weight: 300;
+            font-size: 35px;
+        }
+    }
+}

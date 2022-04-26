@@ -1,0 +1,25 @@
+<meli-header (onFind)="find($event)"></meli-header>
+
+<meli-breadcrumb [categories]="categories"></meli-breadcrumb>
+
+<div class="content">
+
+    <div class="content__image">
+        <img [src]="detail?.item?.picture" alt="thumbnail">
+    </div>
+
+    <div class="content__seller">
+        <h6 class="detail">{{detail?.item?.condition}} - {{detail?.item?.soldQuantity}}</h6>
+        <h4 class="title">{{detail?.item?.title}}</h4>
+        <h6 class="detail">Vendido por: {{detail?.author?.name | titlecase }} {{detail?.author?.lastName | titlecase}}
+        </h6>
+        <h3 class="price">{{detail?.item?.price?.amount | currency:'CLP':'symbol'}}</h3>
+        <button type="button" class="btn btn-primary">Comprar</button>
+    </div>
+
+    <div class="content__description">
+        <h3 class="title">Descripción del producto</h3>
+        <p class="description">{{detail?.item?.description}}</p>
+    </div>
+
+</div>

@@ -1,0 +1,36 @@
+.header {
+    display: grid;
+    grid-template-areas: 'logo form';
+    padding: 10px 250px;
+    background-color: #fff159;
+    grid-template-columns: 130px 1fr;
+
+    &__logo {
+        grid-area: logo;
+
+        img {
+            width: 100px;
+            cursor: pointer;
+        }
+    }
+
+    &__form {
+        align-self: self-end;
+        grid-area: form;
+
+        .input {
+            img {
+                display: block;
+            }
+        }
+
+        button {
+            background: #dbdbdb;
+            border-color: #dbdbdb;
+
+            i {
+                color: #818181;
+            }
+        }
+    }
+}

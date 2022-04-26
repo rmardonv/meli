@@ -1,0 +1,17 @@
+<div class="header">
+
+    <div class="header__logo">
+        <img (click)="home()" src="assets/logo.png" alt="logo" />
+    </div>
+
+    <form [formGroup]="form" class="header__form">
+        <div class="input input-group mb-3">
+            <input type="text" class="form-control" formControlName="query" placeholder="Nunca dejes de buscar">
+            <button (click)="find()" class="btn btn-secondary" type="button" id="button-addon2"
+                [disabled]="!form.valid">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </form>
+
+</div>
