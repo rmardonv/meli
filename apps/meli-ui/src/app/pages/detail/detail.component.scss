@@ -59,6 +59,18 @@
         .description {
             padding-top: 15px;
             white-space: pre-line;
+            width: auto;
+            word-break: break-word;
         }
+    }
+}
+
+@media (max-width: 770px) {
+    .content {
+        margin: 20px 10px;
+        grid-template-areas: 'image image'
+            'seller seller'
+            'description description';
+        grid-template-columns: 1fr 300px;
     }
 }

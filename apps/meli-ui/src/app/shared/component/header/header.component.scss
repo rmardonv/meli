@@ -34,3 +34,12 @@
         }
     }
 }
+
+@media (max-width: 770px) {
+    .header {
+        grid-template-areas: 'logo form ';
+        padding: 10px 10px;
+        background-color: #fff159;
+        grid-template-columns: 100px 1fr;
+    }
+}

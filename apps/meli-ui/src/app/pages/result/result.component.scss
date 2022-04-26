@@ -39,16 +39,22 @@
 
     &__city {
         grid-area: city;
-        //   -webkit-line-clamp: 1;
-        //   -webkit-box-orient: vertical;
-        //  display: -webkit-box;
-        //  overflow: hidden;
-        //  text-overflow: ellipsis;
-        //  word-break: break-word;
     }
 }
 
 .space {
     margin: 20px 0;
     border-top: 0.5px solid rgb(155, 155, 155) !important;
+}
+
+@media (max-width: 770px) {
+    .content {
+        margin: 20px 10px;
+    }
+
+    .result {
+        grid-template-areas: 'image image'
+            'description city';
+        grid-template-columns: 1fr 70px;
+    }
 }
