@@ -1,5 +1,6 @@
 import { FindProduct, ProductDetail } from '@meli/meli-entity';
 import { Inject, Injectable } from '@nestjs/common';
+import { environment } from 'apps/meli-api/src/environments/environment';
 import { forkJoin, map, Observable } from 'rxjs';
 import { FindProductCommand, ProductDetailCommand } from '../../domain/command/product.command';
 import { IProduct, PRODUCT_TOKEN } from '../../domain/port/produc.port';
@@ -51,7 +52,7 @@ export class ProductService {
     private createFindResponse = (values: any): FindProduct.Response => {
         const { results, filters } = values;
         return {
-            items: this.getItems(results),
+            items: this.getItems(results).slice(0, environment.maxSearchResult),
             categories: this.getCategories(filters),
             author: {
                 name: Constants.PRODUCT_NAME,

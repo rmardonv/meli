@@ -4,5 +4,6 @@ export const environment = {
     baseUrl: 'https://api.mercadolibre.com/',
     sites: 'sites/MLA/',
     items: 'items/'
-  }
+  },
+  maxSearchResult: 4
 };
