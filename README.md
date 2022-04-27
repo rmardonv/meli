@@ -2,13 +2,18 @@
 
 
 # Instalation
+1.- Install Node: https://nodejs.org/es/download/
 
-1.- Download dependency package 
+2.- Install Nx CLI: https://nx.dev/getting-started/intro
+
+3.- Install Angular CLI: https://angular.io/guide/setup-local
+
+4.- Download dependency package 
 ``` npm i ```
 
-2.- Run front-end ```  npx nx serve meli-ui --configuration=development ```, default application uri ``` http://localhost:4200/ ```
+5.- Run front-end ```  npx nx serve meli-ui --configuration=development ```, default application uri ``` http://localhost:4200/ ```
 
-2.- Run back-end ```  npx nx serve meli-api  ```, default ingress path ``` http://localhost:3333/api ```
+6.- Run back-end ```  npx nx serve meli-api  ```, default ingress path ``` http://localhost:3333/api ```
 
 
 
