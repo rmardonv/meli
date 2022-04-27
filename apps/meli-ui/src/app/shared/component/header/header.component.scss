@@ -1,8 +1,10 @@
+@import '../../../../assets/theme/styles/variables.scss';
+
 .header {
     display: grid;
     grid-template-areas: 'logo form';
     padding: 10px 250px;
-    background-color: #fff159;
+    background-color: $orange;
     grid-template-columns: 130px 1fr;
 
     &__logo {
@@ -25,11 +27,11 @@
         }
 
         button {
-            background: #dbdbdb;
-            border-color: #dbdbdb;
+            background: $header-search-button;
+            border-color: $header-search-button;
 
             i {
-                color: #818181;
+                color: $header-search-icon;
             }
         }
     }
@@ -39,7 +41,7 @@
     .header {
         grid-template-areas: 'logo form ';
         padding: 10px 10px;
-        background-color: #fff159;
+        background-color: $orange;
         grid-template-columns: 100px 1fr;
     }
 }

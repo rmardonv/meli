@@ -1,3 +1,5 @@
+@import '../../../../assets/theme/styles/variables.scss';
+
 @-webkit-keyframes spin {
     0% {
         -webkit-transform: rotate(0deg);
@@ -28,7 +30,7 @@
     left: 0;
     right: 0;
     z-index: 999;
-    background: rgba(255, 255, 255, 0.8);
+    background: $loader-background;
     bottom: 0;
     height: 100%;
     width: 100%;
@@ -38,7 +40,7 @@
 }
 
 .bg-loader {
-    background-image: url(../../../../assets/logo.png);
+    background-image: $loader-bg-image;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
@@ -46,8 +48,8 @@
     opacity: 1;
 
     .loader {
-        border: 10px solid #f3f3f3;
-        border-top: 10px solid #fff159;
+        border: 10px solid $loader-border;
+        border-top: 10px solid $orange;
         border-radius: 50%;
         width: 120px;
         height: 120px;

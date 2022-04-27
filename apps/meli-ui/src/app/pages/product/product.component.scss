@@ -1,3 +1,5 @@
+@import '../../../assets/theme/styles/variables.scss';
+
 .module {
     display: flex;
     min-height: 300px;
@@ -5,7 +7,7 @@
     justify-content: center;
 
     &__legend {
-        color: #727272;
+        color: $gray-2;
 
         img {
             width: 180px;

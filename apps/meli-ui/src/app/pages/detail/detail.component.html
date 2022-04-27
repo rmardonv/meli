@@ -2,7 +2,7 @@
 
 <meli-breadcrumb [categories]="categories"></meli-breadcrumb>
 
-<div class="content">
+<div *ngIf="!showError" class="content">
 
     <div class="content__image">
         <img [src]="detail?.item?.picture" alt="thumbnail">
@@ -22,4 +22,8 @@
         <p class="description">{{detail?.item?.description}}</p>
     </div>
 
+</div>
+
+<div *ngIf="showError" class="content">
+    <h5>No encontramos el producto seleccionado.</h5>
 </div>

@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductDetail } from '@meli/meli-entity';
-import { Subject, takeUntil } from 'rxjs';
+import { catchError, Subject, takeUntil, throwError } from 'rxjs';
 import { Constants } from '../../shared/util/constant.util';
 import { ProductService } from '../result/shared/services/product.service';
 
@@ -15,7 +15,9 @@ export class DetailComponent implements OnInit, OnDestroy {
 
   protected obs$ = new Subject();
 
-  detail: ProductDetail.Response
+  detail: ProductDetail.Response;
+
+  showError = false;
 
   categories: Array<string> = [];
 
@@ -42,10 +44,16 @@ export class DetailComponent implements OnInit, OnDestroy {
   }
 
   getDetail = () => {
+    this.showError = false;
     const { id } = this.route.snapshot.params
     this.productService.getDetail(id)
-      .pipe(takeUntil(this.obs$))
-      .subscribe(d => this.detail = d);
+      .pipe(
+        takeUntil(this.obs$),
+        catchError(err => {
+          this.showError = true;
+          return throwError(() => new Error(err))
+        }))
+      .subscribe(res => this.detail = res)
   }
 
   find = (evt: string): void => {
